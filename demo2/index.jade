@@ -1,0 +1,83 @@
+doctype
+html
+    head
+        meta(charset="utf-8")
+        - var course = 'jade'
+        title #{course.toUpperCase()}
+    body
+        h2 声明变量和替换数据
+        style.
+            body {color:red;font-size:14px;}
+        script.
+            var course = 'java';
+            
+        h2 转义
+        - var data = 'text'
+        - var htmlData = '<script>alert(1);</script><span>script</span>;' 
+        p #{data}   
+        p #{htmlData}   
+        p= htmlData
+        input(value='#{newDate}')
+
+        
+        h2 非转义
+        p !{htmlData}
+        p!= htmlData
+        p \!{htmlData}
+        input(value=newDate)
+            
+        h2 流程
+            h3 while
+                - var n = 0
+                ul
+                    while n < 3
+                        li= n++
+                        
+            h3 for
+                - var genda = {course:'jade',level:'high'}
+                - for(var k in genda)
+                    p= genda[k]
+                    
+            h3 each
+                h4 遍历对象
+                    - var target = {course:'jade',level:'high'}
+                    each value, key in target
+                        p #{key}: #{value}
+                h4 遍历数组
+                    - var courses = ['node','jade','express']   
+                    each value in courses
+                        p= value 
+                h4 嵌套循环 
+                    - var sections = [{id:1,items:['a','b']},{id:2,items:['c','d']},] 
+                    dl
+                        each section in sections
+                            dt= section.id
+                            each item in section.items
+                                dd= item
+            
+            h3 if else
+                - var isGenda = true;
+                - var lessons = ['jade','node'];
+                if lessons
+                    if lessons.length > 2
+                        p #{lessons.join(',')}
+                    else if lessons.length > 1
+                        p #{lessons.join('-')}
+                    else
+                        p no
+                else 
+                    p no lesson                   
+            
+            h3 unless
+                unless !isGenda
+                    p #{lessons.length}
+            h3 case
+                - var name = 'jade'
+                case name
+                    when 'java'
+                    when 'node'
+                        p hi node
+                    default
+                        p hi jade                
+         
+        

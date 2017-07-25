@@ -1,0 +1,45 @@
+doctype html
+html
+<!--[if IE 8]><html class='ie8'><![endif]-->
+<!--[if IE 9]><html class='ie9'><![endif]-->
+<!--[if !IE]><!--><html><!--<![endif]-->
+head
+    meta
+    title jade study
+body
+    h2 id和class
+        h3#idname(class='classname2').classname jade study
+        #idname2.classname2
+          
+    h2 属性
+        a(href='http://baidu.com',title='jade',data-uid='233') link
+        input(name='course',value='jade',type='checkbox',checked)
+            
+    h2 混合的成段文本和标签
+        p.
+            1. aa<strong>asdf</strong>
+            2. bb
+            <span>22</span>
+            strong 22
+            3. dd
+        p
+            | 1. aa<strong>asdf</strong>
+            | 2. bb
+            | <span>22</span>
+            strong 22
+            | 3. dd   
+                         
+    h2 注释和条件注释
+        h3 单行注释
+            //p 是的饭卡绝世独立疯狂
+        h3 非缓冲注释
+            //- p  阿拉山口点积分卢卡斯地方
+        h3 块注释
+            //-
+                p.
+                    1. aa<strong>asdf</strong>
+                    2. bb
+                    <span>22</span>
+                    strong 22
+                    3. dd  
+</html>

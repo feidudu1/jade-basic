@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "html2jade": "^0.8.6"
+  }
+}

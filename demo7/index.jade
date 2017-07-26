@@ -1,0 +1,18 @@
+doctype html
+html
+<!--[if IE 8]><html class='ie8'><![endif]-->
+<!--[if IE 9]><html class='ie9'><![endif]-->
+<!--[if !IE]><!--><html><!--<![endif]-->
+head
+    meta
+    title jade study
+body
+    #runtime
+    script(src='node_modules/jade/runtime.js')
+    script(src="runtime.js")
+    script.
+        var runtimeNode = document.getElementById('runtime');
+        var runtimeHtml = template({isRuntime:true});
+        runtimeNode.innerHTML = runtimeHtml;
+    //- h2 haha
+</html>

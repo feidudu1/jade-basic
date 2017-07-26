@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "coffe-script": "^1.10.0",
+    "jade": "^1.11.0",
+    "jstransformer-less": "^2.2.0",
+    "less": "^1.7.5",
+    "markdown": "^0.5.0"
+  }
+}
